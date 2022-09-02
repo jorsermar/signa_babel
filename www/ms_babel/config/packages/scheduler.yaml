@@ -1,0 +1,13 @@
+scheduler_bundle:
+    transport:
+        dsn: 'filesystem://first_in_first_out'
+    tasks:
+        read_translations:
+            type: 'command'
+            command: 'messenger:consume -vv'
+            expression: '*/5 * * * *'
+        clean_workers:
+            type: 'command'
+            command: 'messenger:stop-workers'
+            expression: '*/10 * * * *'
+            description: 'A cleanup process to avoid workers to be overloaded'
