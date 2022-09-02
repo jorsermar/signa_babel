@@ -1,5 +1,6 @@
 CREATE DATABASE babel_database;
 GRANT ALL ON babel_database.* TO 'babel_user'@'%' IDENTIFIED BY '9T4NvExZB7crEAZwDnE3IwQr4sYIpD2pjE6o';
 
+USE babel_database;
 CREATE TABLE request (id INT AUTO_INCREMENT NOT NULL, lang_from VARCHAR(255) NOT NULL, lang_to VARCHAR(255) NOT NULL, search VARCHAR(2048) NOT NULL, datetime DATE NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB;
 ALTER TABLE request ADD result VARCHAR(4096) DEFAULT NULL;

@@ -8,7 +8,8 @@ running on a Unix OS. This has been only been tested on macOS Monterey and CentO
 
 ## 1. Install && Deployment
 ```
-git clone
+git clone git@github.com:jorsermar/signa_babel.git
+cd signa_babel
 bash make.sh
 docker-compose up --build
 ```
