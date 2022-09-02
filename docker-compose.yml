@@ -1,7 +1,4 @@
-version: "3.9"
-
-volumes:
-  db:
+version: "3.3"
 
 services:
   babel-web:
@@ -39,7 +36,7 @@ services:
       - babel-queue:redis
     env_file: dev.env
     volumes:
-      - ./www/ms_babel:/srv/www/   
+      - ./www/ms_babel:/srv/www/
 
   babel-db:
     image: mysql:5.7
@@ -52,3 +49,6 @@ services:
 
   babel-queue:
     image: redis:7.0-alpine
+
+volumes:
+  db:
